@@ -1,0 +1,48 @@
+{
+  "name": "johur_vue_exam",
+  "version": "1.0.0",
+  "description": "The EmberGrill - Restaurant Management with Retail POS (Vue 3 + Quasar)",
+  "productName": "The EmberGrill POS",
+  "author": "Johur",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{js,cjs,mjs,vue}\"",
+    "format": "prettier --write \"src/**/*.{js,vue,scss,html}\"",
+    "postinstall": "quasar prepare"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.17.0",
+    "core-js": "^3.31.1",
+    "pinia": "^3.0.4",
+    "quasar": "^2.18.0",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@quasar/app-webpack": "^4.1.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.14.0",
+    "eslint-plugin-vue": "^10.0.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.3.3",
+    "sass": "^1.80.0",
+    "vue-eslint-parser": "^10.0.0"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 10 iOS versions"
+  ],
+  "engines": {
+    "node": "^28 || ^26 || ^24 || ^22 || ^20",
+    "npm": ">= 6.13.4"
+  }
+}

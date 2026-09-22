@@ -1,0 +1,124 @@
+// ------------------------------------------------------------
+//  The EmberGrill POS - global styles
+// ------------------------------------------------------------
+
+:root {
+  --eg-green: #1e6f50;
+  --eg-green-dark: #154d38;
+  --eg-ember: #e8702a;
+  --eg-saffron: #f4b942;
+  --eg-page: #f2f5f3;
+  --eg-surface: #ffffff;
+  --eg-border: rgba(23, 33, 29, 0.08);
+  --eg-muted: #6b7a73;
+  --eg-radius: 16px;
+  --eg-shadow: 0 6px 24px rgba(23, 33, 29, 0.08);
+}
+
+body {
+  font-family:
+    'Outfit',
+    'Roboto',
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  background: var(--eg-page);
+}
+
+body.body--dark {
+  --eg-page: #0e1512;
+  --eg-surface: #17211d;
+  --eg-border: rgba(255, 255, 255, 0.08);
+  --eg-muted: #9fb1a8;
+  --eg-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+// Surface card used everywhere instead of plain q-card styling
+.eg-card {
+  background: var(--eg-surface);
+  border: 1px solid var(--eg-border);
+  border-radius: var(--eg-radius) !important;
+  box-shadow: var(--eg-shadow) !important;
+}
+
+.eg-lift {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(23, 33, 29, 0.16) !important;
+  }
+}
+
+.eg-muted {
+  color: var(--eg-muted);
+}
+
+.eg-gradient {
+  background: linear-gradient(135deg, var(--eg-green) 0%, #2c8f67 60%, var(--eg-saffron) 160%);
+  color: #fff;
+}
+
+.eg-ember-gradient {
+  background: linear-gradient(135deg, var(--eg-ember) 0%, var(--eg-saffron) 100%);
+  color: #fff;
+}
+
+.eg-price {
+  font-weight: 700;
+  color: var(--eg-ember);
+  letter-spacing: 0.2px;
+}
+
+.eg-chip-soft {
+  background: rgba(30, 111, 80, 0.1);
+  color: var(--eg-green);
+  body.body--dark & {
+    background: rgba(76, 200, 150, 0.14);
+    color: #7fdcb4;
+  }
+}
+
+.q-field--outlined .q-field__control,
+.q-field--filled .q-field__control {
+  border-radius: 12px;
+}
+
+.q-btn.eg-btn {
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.eg-page-bg {
+  min-height: 100%;
+  background-color: var(--eg-page);
+  background-image: var(--eg-overlay), var(--eg-bg, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  --eg-overlay: linear-gradient(
+    180deg,
+    rgba(242, 245, 243, 0.8) 0%,
+    rgba(242, 245, 243, 0.6) 100%
+  );
+  body.body--dark & {
+    --eg-overlay: linear-gradient(180deg, rgba(14, 21, 18, 0.86) 0%, rgba(14, 21, 18, 0.7) 100%);
+  }
+}
+
+.page-wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(30, 111, 80, 0.35);
+  border-radius: 8px;
+}
